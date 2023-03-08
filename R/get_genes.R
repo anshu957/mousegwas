@@ -25,7 +25,7 @@ get_genes <- function(snps = NULL,
       ensembl <- NULL
       # Hard-coded version GRCm38 because MDA is with this version.
       try(ensembl <-
-            biomaRt::useMart("ensembl", dataset = "mmusculus_gene_ensembl", host="nov2020.archive.ensembl.org"))
+            biomaRt::useMart("ensembl", dataset = "mmusculus_gene_ensembl", host="https://nov2020.archive.ensembl.org"))
 
       try(annot <-
             biomaRt::getBM(
